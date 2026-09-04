@@ -1,291 +1,202 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elina Teplygina — Arriving alone, one stop at a time</title>
-<meta name="description" content="I moved to Switzerland alone at 16. Mentoring for international students and young professionals figuring out study, career and staying in Switzerland. English &amp; Russian.">
-<meta name="color-scheme" content="dark light">
+<title>Elina Teplygina — Finding your way in Switzerland</title>
+<meta name="description" content="I moved to Switzerland alone at 16. I help international students and young professionals figure out studying, choosing a direction, and building a career here. English &amp; Russian.">
+<meta name="color-scheme" content="light">
 
-<meta property="og:title" content="Elina Teplygina — Arriving alone, one stop at a time">
-<meta property="og:description" content="I moved to Switzerland alone at 16. Now I help internationals navigate study, career and staying here.">
+<meta property="og:title" content="Elina Teplygina — Finding your way in Switzerland">
+<meta property="og:description" content="I moved to Switzerland alone at 16. Now I help internationals work out studying, direction and career here.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Karla:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0c0e'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23e2231a' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f7dad4'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%235b8dc4' stroke-width='3'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/styles.css">
-<script>
-  /* Resolve theme before first paint to avoid a flash. */
-  (function(){
-    var t;
-    try{ t = localStorage.getItem('theme'); }catch(e){}
-    if(!t){ t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'; }
-    document.documentElement.setAttribute('data-theme', t);
-  })();
-</script>
 </head>
 <body>
 
-<div class="grain" aria-hidden="true"></div>
-<div class="cursor" aria-hidden="true"><span></span></div>
-
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- ══ ARRIVALS BOARD INTRO ══ -->
-<div class="boot" id="boot" aria-hidden="true">
-  <div class="boot__inner">
-    <div class="boot__meta">ZÜRICH HB · PLATFORM 16</div>
-    <div class="boot__word" id="bootWord"></div>
-    <div class="boot__bar"><i></i></div>
-  </div>
-</div>
-
-<!-- ══ NAV ══ -->
 <header class="nav" id="nav">
-  <a class="nav__brand" href="#top">
-    <span class="nav__mark" aria-hidden="true"></span>
-    <span class="nav__name">Elina&nbsp;Teplygina</span>
-  </a>
+  <a class="nav__brand" href="#top">Elina&nbsp;Teplygina</a>
   <nav class="nav__links" aria-label="Sections">
-    <a href="#route" data-nav>The route</a>
-    <a href="#lines" data-nav>Three lines</a>
-    <a href="#talk" data-nav>Get in touch</a>
+    <a href="#story" data-nav>My story</a>
+    <a href="#help" data-nav>How I can help</a>
+    <a href="#talk" data-nav>Say hello</a>
   </nav>
-  <div class="nav__tools">
-    <span class="nav__lang" aria-hidden="true">EN&nbsp;/&nbsp;RU</span>
-    <button class="toggle" id="themeToggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
-      <span class="toggle__track"><span class="toggle__knob"></span></span>
-      <span class="toggle__txt" id="toggleTxt">Night</span>
-    </button>
-  </div>
-  <div class="nav__progress"><i id="progressBar"></i></div>
+  <a class="nav__cta" href="#talk">Let's talk</a>
 </header>
 
 <main id="main">
 <a id="top"></a>
 
-<!-- ══ HERO ══ -->
+<!-- ─────────── HERO ─────────── -->
 <section class="hero">
-  <div class="hero__grid">
-    <p class="tag reveal">
-      <span class="tag__dot" aria-hidden="true"></span>
-      Mentoring for internationals in Switzerland
-    </p>
-
-    <h1 class="hero__h1">
-      <span class="ln reveal" style="--d:.05s">I moved to</span>
-      <span class="ln reveal" style="--d:.12s">Switzerland</span>
-      <span class="ln reveal" style="--d:.19s"><em>alone</em> at&nbsp;<span class="num" id="ageNum">16</span>.</span>
-    </h1>
-
-    <p class="hero__lede reveal" style="--d:.3s">
-      No family here. No roadmap. Since then I've worked out school, ETH,
-      a career pivot and the Swiss job market as a non-EU national —
+  <div class="hero__text reveal">
+    <p class="script">Hey there!</p>
+    <h1>I moved to Switzerland <em>alone</em> at&nbsp;16.</h1>
+    <p class="lede">
+      No family here, no roadmap. Since then I've worked out school, ETH,
+      a change of direction and the Swiss job market as a non-EU national —
       one decision at a time. If you're standing at one of those decisions,
       I've probably stood there too.
     </p>
-
-    <div class="hero__cta reveal" style="--d:.38s">
-      <a class="btn" href="#talk">
-        <span>Tell me what you're figuring out</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
-      </a>
-      <a class="btn btn--ghost" href="#route">See the route</a>
+    <div class="hero__cta">
+      <a class="btn" href="#talk">Tell me what you're figuring out</a>
+      <a class="btn btn--soft" href="#story">A bit about me</a>
     </div>
-
-    <dl class="hero__stats reveal" style="--d:.46s">
-      <div><dt>Years in CH</dt><dd data-count="9">9</dd></div>
-      <div><dt>Languages</dt><dd>EN&nbsp;·&nbsp;RU</dd></div>
-      <div><dt>Based in</dt><dd>Zürich</dd></div>
-    </dl>
+    <ul class="pills">
+      <li><span class="pills__dot pills__dot--rose" aria-hidden="true"></span>Zürich, Switzerland</li>
+      <li><span class="pills__dot pills__dot--sky" aria-hidden="true"></span>ETH Zürich</li>
+      <li><span class="pills__dot pills__dot--sage" aria-hidden="true"></span>English &amp; Русский</li>
+    </ul>
   </div>
 
-  <div class="hero__side" aria-hidden="true">
-    <div class="board">
-      <div class="board__row board__row--head"><span>Stop</span><span>Year</span><span>Status</span></div>
-      <div class="board__row"><span>Arrival, alone</span><span>Age 16</span><b class="ok">Done</b></div>
-      <div class="board__row"><span>ETH Zürich, BSc</span><span>2020–24</span><b class="ok">Done</b></div>
-      <div class="board__row"><span>The pivot</span><span>2023</span><b class="ok">Done</b></div>
-      <div class="board__row"><span>MSc &amp; the job market</span><span>Now</span><b class="live">Boarding</b></div>
+  <div class="hero__photo reveal" style="--d:.12s">
+    <span class="hero__blob" aria-hidden="true"></span>
+    <span class="hero__ring" aria-hidden="true"></span>
+    <div class="frame">
+      <img src="assets/elina.jpg" alt="Elina Teplygina" id="portrait" width="720" height="900">
+      <span class="frame__ph" aria-hidden="true">
+        <b>ET</b>
+        <i>Add assets/elina.jpg</i>
+      </span>
     </div>
+    <p class="hero__note">Currently finishing my Master's at ETH&nbsp;Zürich</p>
   </div>
-
-  <div class="hero__scroll" aria-hidden="true"><i></i><span>Scroll</span></div>
 </section>
 
-<!-- ══ TICKER ══ -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker__track">
-    <span>Arrived alone at 16</span><b>◆</b>
-    <span>ETH Zürich</span><b>◆</b>
-    <span>Electrical engineering → consulting</span><b>◆</b>
-    <span>Non-EU permit maze</span><b>◆</b>
-    <span>English &amp; Русский</span><b>◆</b>
-    <span>Startups &amp; venture capital</span><b>◆</b>
-    <span>Arrived alone at 16</span><b>◆</b>
-    <span>ETH Zürich</span><b>◆</b>
-    <span>Electrical engineering → consulting</span><b>◆</b>
-    <span>Non-EU permit maze</span><b>◆</b>
-    <span>English &amp; Русский</span><b>◆</b>
-    <span>Startups &amp; venture capital</span><b>◆</b>
-  </div>
-</div>
-
-<!-- ══ ROUTE ══ -->
-<section class="sec" id="route">
-  <div class="sec__head">
-    <span class="sec__no">01</span>
-    <h2 class="sec__title">The route<br><em>so far</em></h2>
-    <p class="sec__note">Every stop was a decision made without a manual — asking, failing, trying again.</p>
-  </div>
+<!-- ─────────── STORY ─────────── -->
+<section class="sec" id="story">
+  <header class="sec__head reveal">
+    <p class="eyebrow">My story</p>
+    <h2>How I got here</h2>
+    <p class="sec__note">Every step was a decision made without a manual — asking, getting it wrong, and trying again.</p>
+  </header>
 
   <div class="route">
-    <svg class="route__line" viewBox="0 0 40 1000" preserveAspectRatio="none" aria-hidden="true">
-      <path id="routePath" d="M20 0 L20 1000" />
+    <svg class="route__line" viewBox="0 0 24 1000" preserveAspectRatio="none" aria-hidden="true">
+      <path id="routePath" d="M12 0 L12 1000" />
     </svg>
 
     <ol class="stops">
-      <li class="stop reveal">
+      <li class="stop">
         <span class="stop__yr">Age 16</span>
-        <h3>Arrival</h3>
-        <p>Moved to Switzerland alone for school. No family in the country, no network, and a language I was still learning to live in.</p>
-        <div class="stop__ix">
-          <em>Change for</em>
-          <span class="ix ix--red">M1</span>
-        </div>
+        <h3>Arriving on my own</h3>
+        <p>I moved to Switzerland alone for school. No family in the country, no network, and a language I was still learning to live in.</p>
+        <p class="stop__tags"><span class="tag tag--rose">Moving here</span></p>
       </li>
-      <li class="stop reveal">
+      <li class="stop">
         <span class="stop__yr">2020 — 2024</span>
         <h3>ETH Zürich</h3>
-        <p>BSc in Electrical Engineering &amp; Information Technology. Thesis on predicting septic shock from digital biomarkers.</p>
-        <div class="stop__ix">
-          <em>Change for</em>
-          <span class="ix ix--red">M1</span>
-          <span class="ix ix--blue">M2</span>
-        </div>
+        <p>A Bachelor's in Electrical Engineering &amp; Information Technology, with a thesis on predicting septic shock from digital biomarkers.</p>
+        <p class="stop__tags"><span class="tag tag--rose">Moving here</span><span class="tag tag--sky">Finding direction</span></p>
       </li>
-      <li class="stop reveal">
+      <li class="stop">
         <span class="stop__yr">Along the way</span>
-        <h3>Startups &amp; VC</h3>
+        <h3>Startups &amp; venture capital</h3>
         <p>Time in startups, venture capital and entrepreneurship — and the slow realisation that engineering wasn't where I wanted to end up.</p>
-        <div class="stop__ix">
-          <em>Change for</em>
-          <span class="ix ix--blue">M2</span>
-        </div>
+        <p class="stop__tags"><span class="tag tag--sky">Finding direction</span></p>
       </li>
-      <li class="stop reveal">
-        <span class="stop__yr">The pivot</span>
-        <h3>Into consulting</h3>
-        <p>Turned toward business and consulting, including an internship at UNITY Consulting &amp; Innovation — learning how to be taken seriously without a business degree.</p>
-        <div class="stop__ix">
-          <em>Change for</em>
-          <span class="ix ix--blue">M2</span>
-          <span class="ix ix--green">M3</span>
-        </div>
+      <li class="stop">
+        <span class="stop__yr">The change</span>
+        <h3>Moving into consulting</h3>
+        <p>I turned toward business and consulting, including an internship at UNITY Consulting &amp; Innovation — and learned how to be taken seriously without a business degree.</p>
+        <p class="stop__tags"><span class="tag tag--sky">Finding direction</span><span class="tag tag--sage">Building a career</span></p>
       </li>
-      <li class="stop stop--now reveal">
-        <span class="stop__yr">Now</span>
-        <h3>Master's &amp; the market</h3>
-        <p>Finishing my MSc at ETH and navigating the move into a full-time career in Switzerland as a non-EU national.</p>
-        <div class="stop__ix">
-          <em>Change for</em>
-          <span class="ix ix--green">M3</span>
-        </div>
+      <li class="stop stop--now">
+        <span class="stop__yr">Right now</span>
+        <h3>Master's &amp; the job market</h3>
+        <p>Finishing my Master's at ETH and working out the move into a full-time career in Switzerland as a non-EU national.</p>
+        <p class="stop__tags"><span class="tag tag--sage">Building a career</span></p>
       </li>
     </ol>
   </div>
 
-  <figure class="quote reveal">
-    <div class="quote__portrait">
-      <img src="elina-photo.png" alt="Elina Teplygina" id="portrait" loading="lazy" width="420" height="520">
-      <span class="quote__fallback" aria-hidden="true">ET</span>
-    </div>
+  <figure class="note reveal">
     <blockquote>
-      <p>None of this came with a manual. Which school. Which degree. Whether to stay in engineering. How to get taken seriously in consulting interviews without a business background. How to approach the Swiss job market as a non-EU candidate.</p>
-      <p>I'm now having conversations with a small number of international students and young professionals working through the same decisions — to find out where that experience is genuinely useful to someone else.</p>
+      <p>None of this came with a manual. Which school. Which degree. Whether to stay in engineering. How to be taken seriously in consulting interviews without a business background. How to approach the Swiss job market as a non-EU candidate.</p>
+      <p>I'm now having conversations with a small number of international students and young professionals working through the same decisions — to find out where my experience is genuinely useful to someone else.</p>
     </blockquote>
+    <figcaption>Elina</figcaption>
   </figure>
 </section>
 
-<!-- ══ LINES ══ -->
-<section class="sec sec--lines" id="lines">
-  <div class="sec__head">
-    <span class="sec__no">02</span>
-    <h2 class="sec__title">Where the line<br><em>branches</em></h2>
-    <p class="sec__note">Three routes I know well enough to help you navigate.</p>
-  </div>
+<!-- ─────────── HELP ─────────── -->
+<section class="sec sec--tint" id="help">
+  <header class="sec__head reveal">
+    <p class="eyebrow">How I can help</p>
+    <h2>Three things I know <em>well</em></h2>
+    <p class="sec__note">Wherever you are on the way, one of these is probably your question right now.</p>
+  </header>
 
-  <div class="lines">
-    <article class="line line--red tilt reveal">
-      <header>
-        <span class="line__badge">M1</span>
-        <span class="line__who">Considering the move — or newly arrived</span>
-      </header>
-      <h3>Move &amp; study here</h3>
+  <div class="cards reveal">
+    <article class="card card--rose">
+      <span class="card__num" aria-hidden="true">01</span>
+      <h3>Moving &amp; studying here</h3>
+      <p class="card__who">If you're considering the move, or you've just arrived</p>
       <ul>
         <li>Choosing an educational path that actually opens doors</li>
-        <li>What arriving alone is really like</li>
+        <li>What arriving on your own is really like</li>
         <li>Settling in, ETH, and student life</li>
       </ul>
     </article>
 
-    <article class="line line--blue tilt reveal" style="--d:.08s">
-      <header>
-        <span class="line__badge">M2</span>
-        <span class="line__who">Students unsure of their direction</span>
-      </header>
-      <h3>Figure out your career</h3>
+    <article class="card card--sky">
+      <span class="card__num" aria-hidden="true">02</span>
+      <h3>Finding your direction</h3>
+      <p class="card__who">If you're studying and no longer sure where it's going</p>
       <ul>
         <li>You studied something technical and want a different path</li>
-        <li>Breaking into consulting or business</li>
-        <li>Building experience that transfers</li>
+        <li>Moving into consulting or business</li>
+        <li>Building experience that carries across</li>
       </ul>
     </article>
 
-    <article class="line line--green tilt reveal" style="--d:.16s">
-      <header>
-        <span class="line__badge">M3</span>
-        <span class="line__who">Graduating, or graduated, and staying</span>
-      </header>
-      <h3>Build your career here</h3>
+    <article class="card card--sage">
+      <span class="card__num" aria-hidden="true">03</span>
+      <h3>Building your career here</h3>
+      <p class="card__who">If you're graduating, or graduated, and want to stay</p>
       <ul>
         <li>Finding a job as a non-EU graduate</li>
-        <li>Networking without a head start</li>
+        <li>Getting to know people without a head start</li>
         <li>Career decisions around permit constraints</li>
       </ul>
     </article>
   </div>
 
   <p class="beta reveal">
-    <span>Currently in beta</span>
-    I'm testing this through a small number of <strong>free</strong> conversations.
-    If you're navigating one of these decisions, tell me what you're dealing with.
+    <b>Just getting started</b>
+    I'm trying this out through a small number of free conversations. If one of
+    these is your question right now, tell me what you're dealing with.
   </p>
 </section>
 
-<!-- ══ CONTACT ══ -->
-<section class="sec sec--talk" id="talk">
-  <div class="sec__head">
-    <span class="sec__no">03</span>
-    <h2 class="sec__title">Tell me what<br>you're <em>figuring out</em></h2>
-    <p class="sec__note">A few sentences is enough. I read every message myself and I write back. If it's a fit, I'll invite you to a free 20–30&nbsp;minute conversation.</p>
-  </div>
+<!-- ─────────── CONTACT ─────────── -->
+<section class="sec" id="talk">
+  <header class="sec__head reveal">
+    <p class="eyebrow">Say hello</p>
+    <h2>Tell me what you're <em>figuring out</em></h2>
+    <p class="sec__note">A few sentences is plenty. I read every message myself and I write back — and if it's a fit, I'll invite you to a free conversation.</p>
+  </header>
 
-  <div class="talk">
-    <aside class="depart">
-      <div class="depart__head"><span class="dot-live" aria-hidden="true"></span>Next departure</div>
-      <div class="depart__big">20–30<span>min</span></div>
-      <ul class="depart__list">
+  <div class="talk reveal">
+    <aside class="what">
+      <h3>What a chat looks like</h3>
+      <ul>
+        <li><span>How long</span><b>20–30 min</b></li>
         <li><span>Cost</span><b>Free</b></li>
         <li><span>Where</span><b>Video call</b></li>
-        <li><span>Language</span><b>EN / RU</b></li>
-        <li><span>Reply within</span><b>~3 days</b></li>
+        <li><span>Language</span><b>English or Russian</b></li>
+        <li><span>I reply within</span><b>About 3 days</b></li>
       </ul>
-      <a class="depart__mail" href="mailto:elina.tep@gmail.com">Or just email me&nbsp;↗</a>
+      <p class="what__mail">Prefer email? <a href="mailto:elina.tep@gmail.com">elina.tep@gmail.com</a></p>
     </aside>
 
     <div class="formwrap">
@@ -294,7 +205,7 @@
         loading="lazy"
         title="Tell me what you're figuring out"></iframe>
       <p class="formwrap__fb">Form not loading?
-        <a href="https://tally.so/r/REPLACE_FORM_ID" target="_blank" rel="noopener">Open it in a new tab ↗</a>
+        <a href="https://tally.so/r/REPLACE_FORM_ID" target="_blank" rel="noopener">Open it in a new tab</a>
       </p>
     </div>
   </div>
@@ -302,12 +213,12 @@
 </main>
 
 <footer class="foot">
-  <div class="foot__big" aria-hidden="true">ELINA</div>
+  <p class="foot__script">Talk soon!</p>
   <div class="foot__cols">
     <div>
-      <span>Elsewhere</span>
-      <a href="https://www.linkedin.com/in/elina-teplygina/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="mailto:elina.tep@gmail.com">Email ↗</a>
+      <span>Find me</span>
+      <a href="https://www.linkedin.com/in/elina-teplygina/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:elina.tep@gmail.com">Email</a>
     </div>
     <div>
       <span>Where</span>
@@ -318,10 +229,7 @@
       <p>English<br>Русский</p>
     </div>
   </div>
-  <div class="foot__base">
-    <span>© <span id="yr">2026</span> Elina Teplygina</span>
-    <span>End of line ●</span>
-  </div>
+  <p class="foot__base">© <span id="yr">2026</span> Elina Teplygina</p>
 </footer>
 
 <script src="assets/main.js" defer></script>
@@ -329,7 +237,7 @@
 (function(){
   var d=document,w="https://tally.so/widgets/embed.js";
 
-  /* Until a real Tally form ID is pasted in, show a clean fallback
+  /* Until a real Tally form ID is pasted in, show a friendly fallback
      instead of an embed that renders as a broken frame. */
   var frame=d.querySelector("iframe[data-tally-src]");
   if(frame && frame.dataset.tallySrc.indexOf("REPLACE_FORM_ID")>-1){
@@ -342,11 +250,9 @@
       '<p>Tell me what you\'re trying to figure out — a few sentences is plenty. '+
       'I read every message myself and I write back.</p>'+
       '<a class="btn" href="mailto:elina.tep@gmail.com?subject=Figuring%20things%20out">'+
-      '<span>elina.tep@gmail.com</span>'+
-      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>'+
-      '<p style="font-size:13px;color:var(--ink-3)">Site owner: replace '+
-      '<code>REPLACE_FORM_ID</code> in <code>index.html</code> with your Tally form ID '+
-      'to swap this for the embedded form.</p>';
+      'elina.tep@gmail.com</a>'+
+      '<p class="form-stub__hint">Site owner: replace <code>REPLACE_FORM_ID</code> in '+
+      '<code>index.html</code> with your Tally form ID to swap this for the form.</p>';
     wrap.appendChild(stub);
     return;
   }
