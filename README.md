@@ -63,3 +63,32 @@ It'll be live at `https://elinatep.github.io/personalwebsite/`.
   animations only engage once the script runs.
 - Fonts load from Google Fonts; if they're blocked the page falls back to
   system sans and serif and stays readable.
+
+## Custom domain
+
+The site is set up for **elinateplygina.com**. Two halves have to agree:
+
+**1. DNS, at your domain registrar.** Delete the existing parking-page `A`
+records for the root, then add:
+
+| Type  | Name / Host | Value              |
+|-------|-------------|--------------------|
+| A     | `@`         | `185.199.108.153`  |
+| A     | `@`         | `185.199.109.153`  |
+| A     | `@`         | `185.199.110.153`  |
+| A     | `@`         | `185.199.111.153`  |
+| CNAME | `www`       | `elinatep.github.io` |
+
+**2. GitHub.** Settings → Pages → Custom domain → `elinateplygina.com` →
+Save. This writes a `CNAME` file to the repo, which is what tells Pages the
+site answers on that name. Once the check passes, tick **Enforce HTTPS**.
+
+Order matters: GitHub refuses the domain while DNS still points elsewhere,
+so do the DNS first and give it time to propagate.
+
+## Sharing
+
+`assets/og-image.jpg` (1200×630) is the link preview card used by LinkedIn,
+WhatsApp and the rest. It's referenced with absolute URLs in `index.html`,
+so previews only render once the domain is live. If you change the headline
+or the photo, regenerate it to match.
