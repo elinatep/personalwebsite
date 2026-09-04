@@ -228,7 +228,10 @@ a{color:inherit;text-decoration:none;}
   background:var(--blush);
   display:grid;place-items:center;
 }
-.frame img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1;}
+.frame img{
+  width:100%;height:100%;position:relative;z-index:1;
+  object-fit:cover;object-position:50% 35%;
+}
 .frame img.missing{display:none;}
 .frame__ph{
   position:absolute;display:grid;gap:10px;justify-items:center;text-align:center;
@@ -238,9 +241,7 @@ a{color:inherit;text-decoration:none;}
   font-family:var(--display);font-size:clamp(48px,7vw,72px);
   font-weight:500;color:#fff;line-height:1;
 }
-.frame__ph i{
-  font-style:normal;font-size:12.5px;letter-spacing:.06em;color:#9c6055;
-}
+
 .hero__note{
   position:relative;z-index:1;
   margin-top:18px;font-size:14px;color:var(--ink-3);text-align:center;

