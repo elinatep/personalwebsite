@@ -198,11 +198,11 @@
 
     <div class="formwrap">
       <iframe
-        data-tally-src="https://tally.so/embed/REPLACE_FORM_ID?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        data-tally-src="https://tally.so/embed/xXWkVk?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
         loading="lazy"
         title="Tell me what you're figuring out"></iframe>
       <p class="formwrap__fb">Form not loading?
-        <a href="https://tally.so/r/REPLACE_FORM_ID" target="_blank" rel="noopener">Open it in a new tab</a>
+        <a href="https://tally.so/r/xXWkVk" target="_blank" rel="noopener">Open it in a new tab</a>
       </p>
     </div>
   </div>
@@ -232,26 +232,6 @@
 <script>
 (function(){
   var d=document,w="https://tally.so/widgets/embed.js";
-
-  /* Until a real Tally form ID is pasted in, show a friendly fallback
-     instead of an embed that renders as a broken frame. */
-  var frame=d.querySelector("iframe[data-tally-src]");
-  if(frame && frame.dataset.tallySrc.indexOf("REPLACE_FORM_ID")>-1){
-    var wrap=frame.closest(".formwrap");
-    wrap.classList.add("is-placeholder");
-    var stub=d.createElement("div");
-    stub.className="form-stub";
-    stub.innerHTML=
-      '<h3>The form is just being set up</h3>'+
-      '<p>It will be here shortly. In the meantime, send me a message on LinkedIn '+
-      'and tell me what you\'re trying to figure out \u2014 a few sentences is plenty.</p>'+
-      '<a class="btn" href="https://www.linkedin.com/in/elina-teplygina/" '+
-      'target="_blank" rel="noopener">Message me on LinkedIn</a>'+
-      '<p class="form-stub__hint">Site owner: replace <code>REPLACE_FORM_ID</code> in '+
-      '<code>index.html</code> with your Tally form ID to swap this for the form.</p>';
-    wrap.appendChild(stub);
-    return;
-  }
 
   var v=function(){
     if(typeof Tally!=="undefined"){Tally.loadEmbeds();}

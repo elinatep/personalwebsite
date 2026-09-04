@@ -27,27 +27,19 @@ are biased warm and the darkest ink is a soft plum-grey, never black.
 - Single light theme by choice — no dark mode. Motion is limited to gentle
   fade-ups and the timeline line.
 
-## Two things to fill in before publishing
+## Setup
 
-**1. The contact form.** The site uses a [Tally](https://tally.so) form —
-free, and you can sign in with Google rather than making a new password.
+**1. The contact form.** Done — the site embeds Tally form `xXWkVk`
+inline, so it renders inside the page rather than as a popup.
 
-1. Sign in at tally.so and create a form. Two or three questions is plenty:
-   *what are you trying to figure out*, *where are you right now*, and how to
-   reach you.
-2. Hit **Publish**, then copy the form ID — it's the last part of the share
-   link, `tally.so/r/w1a2b3` → `w1a2b3`.
-3. In `index.html`, replace both occurrences of `REPLACE_FORM_ID` with it.
-
-Until you do that, the contact section shows a short "the form is being set
-up" note pointing at LinkedIn — so the site is safe to publish before the
-form exists.
+To point it at a different form, replace both occurrences of `xXWkVk` in
+`index.html` with the new ID (the last part of the share link,
+`tally.so/r/w1a2b3` → `w1a2b3`).
 
 **No email address appears anywhere on this site**, by design: addresses in
 page source get harvested by spam bots. Tally collects the visitor's address
 and notifies you in your own inbox, so people can reach you without yours
-ever being public. If you later want a visible address, use one made for
-this rather than a personal account.
+ever being public.
 
 **2. The portrait.** Done — it's at `assets/elina.jpg`, 900×1200.
 
