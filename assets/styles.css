@@ -46,6 +46,9 @@ html[lang="ru"]{
    to keep the two hero buttons on one line at desktop widths. */
 @media(min-width:901px){
   html[lang="ru"] .hero{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);}
+  /* Russian label/value pairs are longer, so the side panel needs more room
+     than the English one before the values start wrapping three lines deep. */
+  html[lang="ru"] .talk{grid-template-columns:minmax(0,350px) minmax(0,1fr);}
 }
 
 *,*::before,*::after{box-sizing:border-box;}
