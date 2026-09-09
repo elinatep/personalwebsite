@@ -92,3 +92,18 @@ so do the DNS first and give it time to propagate.
 WhatsApp and the rest. It's referenced with absolute URLs in `index.html`,
 so previews only render once the domain is live. If you change the headline
 or the photo, regenerate it to match.
+
+## Search
+
+`sitemap.xml` and `robots.txt` sit at the root, and `index.html` carries a
+JSON-LD `Person` block describing who the site is about.
+
+For a single-page site the sitemap does very little on its own; the useful
+step is [Google Search Console](https://search.google.com/search-console).
+Add the domain, verify it with the DNS TXT record it gives you (in Spaceship,
+Advanced DNS, same place as the A records), submit `sitemap.xml`, then use
+**URL Inspection → Request indexing** to get listed within days rather than
+weeks.
+
+If the headline or the description changes, update the `Person` block and
+the `lastmod` date in `sitemap.xml` to match.
