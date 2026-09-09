@@ -4,10 +4,14 @@ A single-page personal site for Elina Teplygina. No build step, no
 dependencies: open `index.html` and it runs.
 
 ```
-index.html          markup + the Tally embed loader
-assets/styles.css   all styling, light and dark
-assets/main.js      interaction layer
-elina-photo.png     portrait (add this file — see below)
+index.html            English page
+ru/index.html         Russian page
+assets/styles.css     all styling, shared by both
+assets/main.js        interaction layer, shared by both
+assets/elina.jpg      portrait
+assets/og-image.jpg   English link-preview card
+assets/og-image-ru.jpg  Russian link-preview card
+sitemap.xml robots.txt CNAME
 ```
 
 ## The idea
@@ -107,3 +111,28 @@ weeks.
 
 If the headline or the description changes, update the `Person` block and
 the `lastmod` date in `sitemap.xml` to match.
+
+## Two languages
+
+English lives at `/`, Russian at `/ru/`, and the nav carries an EN/RU switch.
+They are separate real pages, not a JavaScript toggle, so each can be indexed
+and ranked on its own. Both carry `hreflang` tags pointing at each other and
+at `x-default`, so Google serves the right one per visitor.
+
+Both pages share `assets/styles.css` and `assets/main.js`. Fraunces and Karla
+have no Cyrillic glyphs, so `html[lang="ru"]` swaps the two type tokens for
+Lora and Manrope, which do. Colours, spacing and layout are identical.
+
+**When you edit one page, edit the other.** Nothing keeps them in sync
+automatically. The same applies to the two `og-image` cards.
+
+Adding a third language means copying `ru/` to, say, `de/`, translating it,
+adding the token override if the fonts need it, and adding the new `hreflang`
+line to *every* page plus `sitemap.xml`.
+
+## Languages offered
+
+The site says English, Russian and German. If that changes, update: the hero
+pills, the "Language" row in the contact card, the footer, the meta
+descriptions, the JSON-LD `knowsLanguage` block, and the subtitle baked into
+both share cards.
