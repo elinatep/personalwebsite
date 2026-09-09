@@ -13,6 +13,7 @@
   /* soft fields */
   --blush:#f7dad4;
   --sky:#d7e6f5;
+  --sky-line:#a9c8e8;
   --sage:#dcE9dd;
   --butter:#f9ecc4;
 
@@ -171,9 +172,7 @@ a{color:inherit;text-decoration:none;}
   gap:clamp(30px,6vw,72px);
   align-items:center;
 }
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr;gap:44px;}
-}
+@media(max-width:900px){ .hero{grid-template-columns:1fr;} }
 
 .hero__text .script{margin-bottom:14px;}
 .hero h1{
@@ -278,14 +277,14 @@ a{color:inherit;text-decoration:none;}
 /* ── Story timeline ──────────────────────────────────────── */
 .route{position:relative;padding-left:clamp(26px,4vw,44px);}
 .route__line{
-  position:absolute;left:0;top:10px;
-  width:24px;height:calc(100% - 20px);
-  overflow:visible;
+  position:absolute;left:11px;top:10px;
+  width:2.5px;height:calc(100% - 20px);
+  border-radius:2px;overflow:hidden;
 }
-.route__line path{
-  fill:none;stroke:var(--sky);stroke-width:2.5;
-  stroke-linecap:round;vector-effect:non-scaling-stroke;
-  stroke-dasharray:1;stroke-dashoffset:1;
+.route__line i{
+  display:block;width:100%;height:100%;
+  background:var(--sky-line);border-radius:2px;
+  transform:scaleY(0);transform-origin:top;
 }
 
 .stops{display:grid;gap:clamp(26px,3.5vw,40px);}
@@ -296,8 +295,8 @@ a{color:inherit;text-decoration:none;}
 }
 .stop::before{
   content:"";position:absolute;
-  left:calc(-1 * clamp(26px,4vw,44px) + 12px - 6px);
-  top:7px;width:12px;height:12px;border-radius:50%;
+  left:calc(-1 * clamp(26px,4vw,44px) + 12px - 7px);
+  top:6px;width:14px;height:14px;border-radius:50%;
   background:var(--paper);border:2.5px solid var(--blue);
   transform:scale(0);transition:transform .5s var(--ease) .1s;
 }
@@ -309,7 +308,7 @@ a{color:inherit;text-decoration:none;}
   letter-spacing:.12em;text-transform:uppercase;
   color:var(--ink-3);margin-bottom:8px;
 }
-.stop h3{font-size:clamp(21px,2.4vw,27px);margin-bottom:10px;}
+.stop h3{font-size:clamp(23px,2.4vw,27px);margin-bottom:10px;}
 .stop p{color:var(--ink-2);line-height:1.65;}
 
 .stop__tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
@@ -369,7 +368,7 @@ a{color:inherit;text-decoration:none;}
   font-size:13px;font-weight:700;
   margin-bottom:6px;
 }
-.card h3{font-size:clamp(21px,2.3vw,25px);min-height:2.1em;}
+.card h3{font-size:clamp(23px,2.3vw,25px);min-height:2.1em;}
 @media(max-width:940px){ .card h3{min-height:0;} }
 .card__who{
   font-size:14px;color:var(--ink-3);line-height:1.5;
@@ -385,21 +384,11 @@ a{color:inherit;text-decoration:none;}
   width:8px;height:8px;border-radius:50%;background:var(--field);
 }
 
-.beta{
-  margin-top:clamp(28px,4vw,40px);
-  font-size:16.5px;line-height:1.7;color:var(--ink-2);
-  max-width:60ch;
-}
-.beta b{
-  display:block;font-size:12px;font-weight:700;
-  letter-spacing:.16em;text-transform:uppercase;
-  color:var(--rose);margin-bottom:8px;
-}
-
 /* ── Contact ─────────────────────────────────────────────── */
 .talk{
-  display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);
-  gap:clamp(20px,3vw,40px);align-items:start;
+  display:grid;grid-template-columns:minmax(0,290px) minmax(0,1fr);
+  gap:clamp(20px,3vw,36px);align-items:start;
+  max-width:1040px;
 }
 @media(max-width:900px){ .talk{grid-template-columns:1fr;} }
 
@@ -426,9 +415,9 @@ a{color:inherit;text-decoration:none;}
 
 .formwrap{
   background:var(--card);border:1px solid var(--line);
-  border-radius:var(--r);padding:clamp(18px,3vw,30px);
+  border-radius:var(--r);padding:clamp(14px,2vw,22px);
 }
-.formwrap iframe{width:100%;border:0;min-height:520px;background:transparent;}
+.formwrap iframe{width:100%;border:0;min-height:340px;background:transparent;}
 .formwrap__fb{margin-top:12px;font-size:13.5px;color:var(--ink-3);}
 .formwrap__fb a{color:var(--blue);font-weight:600;}
 
@@ -462,6 +451,28 @@ a{color:inherit;text-decoration:none;}
 .foot__base{
   padding-top:22px;border-top:1px solid var(--line);
   font-size:13.5px;color:var(--ink-3);
+}
+
+/* ── Phone layout (kept last so nothing above re-overrides it) ── */
+@media(max-width:900px){
+  /* On a phone the portrait sat below the lede, both buttons and the pills,
+     so the first thing a visitor met was a wall of text. Reordering puts it
+     directly under the headline, where it introduces her. */
+  .hero{grid-template-columns:1fr;row-gap:0;}
+  .hero__text{display:contents;}
+  .hero__text .script{order:1;}
+  .hero h1{order:2;max-width:none;}
+  .hero__photo{order:3;margin-top:30px;}
+  .hero .lede{order:4;margin-top:30px;}
+  .hero__cta{order:5;}
+  .pills{order:6;}
+  .frame{width:min(100%,300px);}
+  .hero__blob{width:clamp(120px,26vw,170px);}
+  .hero__ring{display:none;}
+}
+@media(max-width:480px){
+  .hero__cta{display:grid;}
+  .btn{text-align:center;}
 }
 
 /* ── Reduced motion ──────────────────────────────────────── */

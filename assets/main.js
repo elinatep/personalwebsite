@@ -44,16 +44,12 @@
 
   /* ── Scroll: nav hairline, active link, timeline line ── */
   var nav      = document.getElementById('nav');
-  var path     = document.getElementById('routePath');
+  var fill     = document.getElementById('routeFill');
   var routeEl  = document.querySelector('.route');
   var sections = document.querySelectorAll('main section[id]');
   var navLinks = document.querySelectorAll('[data-nav]');
 
-  if (path) {
-    /* pathLength=1 lets the dash offset be driven by a plain 0..1 ratio. */
-    path.setAttribute('pathLength', '1');
-    if (reduced) path.style.strokeDashoffset = '0';
-  }
+  if (fill && reduced) fill.style.transform = 'scaleY(1)';
 
   var ticking = false;
 
@@ -65,11 +61,12 @@
 
       if (nav) nav.classList.toggle('stuck', y > 12);
 
-      if (path && routeEl && !reduced) {
+      if (fill && routeEl && !reduced) {
         var box   = routeEl.getBoundingClientRect();
         var vh    = window.innerHeight;
         var ratio = (vh * 0.78 - box.top) / (box.height + vh * 0.4);
-        path.style.strokeDashoffset = String(1 - Math.max(0, Math.min(1, ratio)));
+        fill.style.transform =
+          'scaleY(' + Math.max(0, Math.min(1, ratio)).toFixed(4) + ')';
       }
 
       var current = '';
