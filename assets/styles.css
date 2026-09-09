@@ -140,7 +140,9 @@ a{color:inherit;text-decoration:none;}
 .nav.stuck{border-bottom-color:var(--line);}
 .nav__brand{
   font-family:var(--display);font-size:19px;font-weight:600;
-  letter-spacing:-.01em;flex:0 0 auto;
+  letter-spacing:-.01em;
+  flex:0 1 auto;min-width:0;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
 }
 .nav__links{display:flex;gap:28px;margin-left:auto;}
 .nav__links a{
@@ -179,9 +181,20 @@ a{color:inherit;text-decoration:none;}
   .langsw{margin-left:auto;}
   .nav__cta{margin-left:0;}
 }
-@media(max-width:400px){
-  .nav{gap:10px;}
-  .nav__cta{padding:9px 14px;font-size:13.5px;}
+@media(max-width:340px){
+  .nav{gap:6px;padding-inline:12px;}
+  .nav__brand{font-size:15px;}
+  .nav__cta{padding:8px 11px;font-size:12.5px;}
+}
+@media(max-width:430px){
+  /* Brand + language switch + button is a tight row on a small phone, and
+     the Russian button label is wider than the English one. Every pixel
+     here goes to keeping the full name visible rather than ellipsised. */
+  .nav{gap:6px;padding-inline:14px;}
+  .nav__brand{font-size:16px;letter-spacing:-.02em;}
+  .langsw{gap:0;}
+  .langsw a{padding:6px 5px;}
+  .nav__cta{padding:9px 11px;font-size:12.5px;}
 }
 
 /* ── Reveal (gentle; starts visible if JS never runs) ────── */
