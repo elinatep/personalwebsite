@@ -136,3 +136,15 @@ The site says English, Russian and German. If that changes, update: the hero
 pills, the "Language" row in the contact card, the footer, the meta
 descriptions, the JSON-LD `knowsLanguage` block, and the subtitle baked into
 both share cards.
+
+## The beta counter
+
+The contact panel on each page carries a badge reading
+"10 free conversations · limited beta". As spots fill, edit that badge in
+`index.html` and `ru/index.html` — an HTML comment marks the spot in both.
+Change it to "3 conversations left · limited beta" and so on.
+
+Only claim a number that is true. The point of the badge is that the limit
+is real; a stale count does more damage than no count at all. When the ten
+are done, replace the badge with whatever comes next rather than leaving it
+at zero.
