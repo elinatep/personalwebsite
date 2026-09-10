@@ -208,7 +208,7 @@ a{color:inherit;text-decoration:none;}
 /* ── Hero ────────────────────────────────────────────────── */
 .hero{
   max-width:var(--max);margin:0 auto;
-  padding:clamp(34px,5vw,64px) var(--pad) clamp(50px,7vw,86px);
+  padding:clamp(34px,5vw,64px) var(--pad) clamp(34px,4.5vw,54px);
   display:grid;
   grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
   gap:clamp(30px,6vw,72px);
@@ -295,7 +295,7 @@ a{color:inherit;text-decoration:none;}
 /* ── Section frame ───────────────────────────────────────── */
 .sec{
   max-width:var(--max);margin:0 auto;
-  padding:clamp(60px,9vw,110px) var(--pad);
+  padding:clamp(50px,6.5vw,80px) var(--pad);
 }
 .sec--tint{
   max-width:none;background:var(--cream);
@@ -308,7 +308,7 @@ a{color:inherit;text-decoration:none;}
 .sec__head{
   display:grid;gap:14px;
   max-width:var(--max);
-  margin-bottom:clamp(40px,5vw,64px);
+  margin-bottom:clamp(30px,4vw,46px);
 }
 .sec__head h2{font-size:clamp(32px,4.4vw,54px);max-width:16ch;}
 .sec__head h2 em{
@@ -367,7 +367,7 @@ a{color:inherit;text-decoration:none;}
 
 /* Personal note */
 .note{
-  margin:clamp(44px,6vw,72px) 0 0;
+  margin:clamp(34px,4.5vw,54px) 0 0;
   background:var(--cream);
   border-radius:var(--r);
   padding:clamp(26px,4vw,44px);
