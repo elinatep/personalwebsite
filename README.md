@@ -148,3 +148,23 @@ Only claim a number that is true. The point of the badge is that the limit
 is real; a stale count does more damage than no count at all. When the ten
 are done, replace the badge with whatever comes next rather than leaving it
 at zero.
+
+## Privacy
+
+`privacy.html` and `ru/privacy.html`, linked from each footer and listed in
+the sitemap.
+
+**Before publishing, replace `REPLACE_PRIVACY_EMAIL`** in both files with a
+real address. It appears twice, once per language. The page cannot do its
+job without a contact route for data requests.
+
+There is no cookie banner because there are no cookies. Checked in a real
+browser: the site sets no cookies and writes nothing to localStorage or
+sessionStorage. It contacts two third parties, Google Fonts for the
+typefaces and tally.so for the form, and the policy says so.
+
+If you later add analytics, embed anything else, or start storing
+preferences in the browser, that changes and the policy needs revisiting.
+
+This is a plain-language draft, not legal advice. Worth having someone
+check it against your situation, particularly if you start charging.
