@@ -154,9 +154,9 @@ at zero.
 `privacy.html` and `ru/privacy.html`, linked from each footer and listed in
 the sitemap.
 
-**Before publishing, replace `REPLACE_PRIVACY_EMAIL`** in both files with a
-real address. It appears twice, once per language. The page cannot do its
-job without a contact route for data requests.
+The contact address is hello@elinateplygina.com, used in the policy and
+beside the form on both main pages. No personal address appears anywhere
+on the site.
 
 There is no cookie banner because there are no cookies. Checked in a real
 browser: the site sets no cookies and writes nothing to localStorage or
